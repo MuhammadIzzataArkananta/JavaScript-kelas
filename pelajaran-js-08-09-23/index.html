@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="Waktu">Waktu</h1>
+        <button onclick="halo()">
+            klik
+        </button>
+        <button onclick="waktu()">
+            Waktu
+        </button>
+
+
+        <input type="number" id="bulan" placeholder="bulan">
+        <input type="number" id="tanggal" placeholder="tanggal">
+        <h1 id="zodiak">Zodiak</h1>
+        <button onclick="zodiak()">Zodiak</button>
+    <div>
+        <h1 id="hasill">hasil perkalian</h1>
+        <input type="number" id="bil1" placeholder="bilangan 1">
+        <input type="number" id="bil2" placeholder="bilangan 2">
+        <button onclick="kali()">kali</button>
+    </div>
+    
+    <div>
+        <h1 id="hasil">hasil penjumlahan</h1>
+        <input type="number" id="bil1" placeholder="bilangan 1">
+        <input type="number" id="bil2" placeholder="bilangan 2">
+        <button onclick="tambah()">tambah</button>
+    </div>
+</div>
+
+    <script>
+        function Hallo(){
+            alert("Halo Javascript");
+        }
+        function Waktu(){
+            document.getElementById('Waktu').innerHTML= Data();
+        }
+        function Zodiak(){
+            let tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('bulan').value;
+            let Zodiak="kurang tau";
+            if(bulan==1){
+                if(tanggal>0 && tanggal<31){
+                    Zodiak="Leo";
+                }
+                if(bulan==2){
+                if(tanggal>0 && tanggal<31){
+                    Zodiak="Pisces";
+                }
+                if(bulan==3){
+                if(tanggal>0 && tanggal<31){
+                    Zodiak="Aries";
+                }
+            }
+            document.getElementById('Zodiak').innerHTML=Zodiak;
+        }
+    }
+}
+        function kali(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let hasil=a*b;
+            document.getElementById('hasill').innerHTML=hasil;
+        }
+        function tambah(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let hasil= parseInt(a)+parseInt(b);
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+    </script>
+</body>
+</html>
+
